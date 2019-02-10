@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Forms35.Pages.MainPage">
+
+    <AbsoluteLayout>
+        <Frame AbsoluteLayout.LayoutFlags="All" 
+               AbsoluteLayout.LayoutBounds=".40,.50,.75,.30"
+               BorderColor="Silver">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Entry Placeholder="Vul hier telefoonnummer in"
+                       Text="{Binding PhoneNumber}"/>
+
+                <Button Grid.Row="1"
+                        Text="Call"
+                        Command="{Binding CallCommand}"/>
+            </Grid>
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>
